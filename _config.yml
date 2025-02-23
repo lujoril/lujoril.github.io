@@ -1,6 +1,6 @@
-title: "Blog Title"
-author: "Blog Author"
-description: "Made with <b style=\"color: #f45;\">&lt;3</b>"
+title: "Luke Riley"
+author: "Luke"
+description: "Georgia Institute of Technology"
 permalink: /:title/
 lang: "en"
 excerpt_separator: "\n\n\n"
