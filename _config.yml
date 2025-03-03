@@ -19,7 +19,7 @@ navigation:
   - {file: "index.html", title: "Home"}
   - {file: "projects.md", title: "Projects"}
   - {file: "skills.md", title: "Skills"}
-  - {file: "/assets/Resume_Riley_Luke.pdf", title: "CV"}
+  - {url: /assets/Resume_Riley_Luke.pdf, title: "CV"}
   - {file: "work.md", title: "Experience"}
   - {file: "README.md"}
 
