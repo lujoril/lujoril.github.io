@@ -26,7 +26,7 @@ navigation:
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: Mail, icon: envelope, url: "mailto:ljriley0310@gmail.com"}
   - {title: Github, icon: github, url: "https://github.com/lujoril"}
-  - {title: Linkedin, icon: linkedin, url: "https://linkedin.com/lujoril"}
+  - {title: Linkedin, icon: rss, url: "https://linkedin.com/lujoril"}
   
 
 comments:
