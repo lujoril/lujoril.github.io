@@ -1,6 +1,6 @@
 title: "Luke Riley"
 author: "Luke"
-description: "Personal Website"
+description: "Georgia Institute of Technology"
 permalink: /:title/
 lang: "en"
 excerpt_separator: "\n\n\n"
@@ -26,7 +26,8 @@ navigation:
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: Mail, icon: envelope, url: "mailto:ljriley0310@gmail.com"}
   - {title: Github, icon: github, url: "https://github.com/lujoril"}
-  - {title: Subscribe, icon: rss, url: "/feed.xml"}
+  - {title: Linkedin, icon: rss, url: "https://linkedin.com/lujoril"}
+  
 
 comments:
 #  disqus_shortname: ""    # see https://disqus.com/
