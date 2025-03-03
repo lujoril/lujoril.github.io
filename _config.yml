@@ -17,10 +17,10 @@ minimal: false             # use a dark header
 
 navigation:
   - {file: "index.html", title: "Home"}
-  - {file: "projects.html", title: "Projects"}
-  - {file: "skills.html", title: "Skills"}
+  - {file: "projects.md", title: "Projects"}
+  - {file: "skills.md", title: "Skills"}
   - {file: "Resume_Riley_Luke.pdf", title: "CV"}
-  - {file: "work.html", title: "Experience"}
+  - {file: "work.md", title: "Experience"}
   - {file: "README.md"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
