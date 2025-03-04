@@ -9,7 +9,7 @@ title: "Projects"
 ## Wundergrub's Alternative Protein Pilot Program Feasability Study
 ![Relative](Slide11.jpg)
 ## Random Forest Regressor & Regression Neural Network Used Car Prediction Algo
-![Relative](feat_imp_bus_anal.jpg)
+![Relative](feat_imp_bus_anal.png)
 ## Predicting VC Success
-![Relative](vc_pic.jpg)
+![Relative](vc_pic.png)
 
