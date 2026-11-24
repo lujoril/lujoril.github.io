@@ -1,0 +1,23 @@
+---
+layout: page
+title: "Projects"
+permalink: /projects/
+subtitle: "Analytics, sustainability and machine learning work."
+---
+<div class="project-list">
+{% for project in site.data.projects %}
+  <section class="project-card">
+    <h2>{{ project.title }}</h2>
+    {% if project.summary %}<p>{{ project.summary }}</p>{% endif %}
+    {% if project.tags %}<ul class="pills small">{% for tag in project.tags %}<li>{{ tag }}</li>{% endfor %}</ul>{% endif %}
+    {% if project.images %}
+    <div class="project-images{% if project.images.size > 1 %} two{% endif %}">
+      {% for img in project.images %}<a href="{{ img | relative_url }}" target="_blank" rel="noopener"><img src="{{ img | relative_url }}" alt="{{ project.title }} figure {{ forloop.index }}" loading="lazy"></a>{% endfor %}
+    </div>
+    {% endif %}
+    {% if project.links %}
+    <p class="project-links">{% for link in project.links %}<a class="btn" href="{% if link.url contains '://' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}" target="_blank" rel="noopener">{{ link.title }} →</a>{% endfor %}</p>
+    {% endif %}
+  </section>
+{% endfor %}
+</div>

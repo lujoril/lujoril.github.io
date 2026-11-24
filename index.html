@@ -1,21 +1,51 @@
 ---
-layout: page
-title: "Luke Riley Website Home Page"
+layout: default
+title: "Home"
 ---
-<img src="IMG_3748.JPG" alt="Luke Riley" width="200" >
+<section class="hero">
+  <img class="avatar" src="{{ "/IMG_3748.JPG" | relative_url }}" alt="Portrait of Luke Riley" width="160" height="160">
+  <div>
+    <p class="eyebrow">Welcome to my website</p>
+    <h1>Hi, I'm <span class="gradient-text">Luke Riley</span>.</h1>
+    <p class="lede">A student at the Georgia Institute of Technology studying business with a minor in FinTech.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="{{ "/projects/" | relative_url }}">View projects</a>
+      <a class="btn" href="{{ "/Resume_Riley_Luke.pdf" | relative_url }}">Download CV</a>
+    </div>
+  </div>
+</section>
 
-<br>
-<h3><p>Welcome to My Website</h3>
-Hello! I am Luke Riley, a student at Georgia Institute of Technology studying business with a minor in FinTech.</p>
-<h2>Interests</h2>
+<section>
+  <h2 class="section-title">Interests</h2>
+  <div class="interest-grid">
+    <div class="interest-card blue">
+      <h3>Primary</h3>
+      <ul class="pills">
+        <li>Data Analytics</li><li>FinTech</li><li>Sustainability</li>
+      </ul>
+    </div>
+    <div class="interest-card green">
+      <h3>Secondary</h3>
+      <ul class="pills">
+        <li>Blockchain</li><li>Cyber Risk</li><li>Entrepreneurship</li><li>Machine Learning</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-<h3>Primary</h3>
-<p>Data Analytics, FinTech, Sustainability</p>
+{% if site.posts.size > 0 %}
+<section>
+  <h2 class="section-title">Latest articles</h2>
+  {% include article-list.html limit=3 %}
+  <p><a class="more" href="{{ "/articles/" | relative_url }}">All articles →</a></p>
+</section>
+{% endif %}
 
-<h3>Secondary</h3>
-<p>Blockchain, Cyber Risk, Entrepreneurship, Machine Learning</p>
-<br>
-<p>Check out my <a href="https://www.linkedin.com/in/lujoril" target="_blank">LinkedIn profile</a> to learn more!</p>
-<p>Email: <a href="lriley9@gatech.edu" target="_blank">lriley9@gatech.edu</a> </p>
-<p>Personal Email: <a href="ljriley0310@gmail.com" target="_blank">ljriley0310@gmail.com</a> </p>
-
+<section>
+  <h2 class="section-title">Get in touch</h2>
+  <ul class="contact">
+    <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/lujoril" target="_blank" rel="noopener">linkedin.com/in/lujoril</a></li>
+    <li><span>School email</span><a href="mailto:lriley9@gatech.edu">lriley9@gatech.edu</a></li>
+    <li><span>Personal email</span><a href="mailto:ljriley0310@gmail.com">ljriley0310@gmail.com</a></li>
+  </ul>
+</section>

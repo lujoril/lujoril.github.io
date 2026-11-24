@@ -1,0 +1,17 @@
+# Each project becomes a card on the Projects page.
+# Optional fields: summary (one or two sentences), tags (list), links (list of {title, url}).
+# Image and link paths are relative to the site root.
+
+- title: "Scope 3 Procurement GHG Emissions Analysis"
+  images: ["/method_ghg.jpg", "/ghg_wheel.jpg"]
+  links:
+    - {title: "Final presentation (PDF)", url: "/Final_Pres_Fellowship_Riley.pdf"}
+
+- title: "Wundergrub's Alternative Protein Pilot Program Feasibility Study"
+  images: ["/Slide11.jpg"]
+
+- title: "Random Forest Regressor & Regression Neural Network Used Car Prediction Algo"
+  images: ["/feat_imp_bus_anal.png"]
+
+- title: "Predicting VC Success"
+  images: ["/vc_pic.png", "/ROC_curve_VC.png"]

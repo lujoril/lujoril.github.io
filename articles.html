@@ -1,0 +1,14 @@
+---
+layout: page
+title: "Articles"
+subtitle: "Writing on data analytics, FinTech and sustainability."
+permalink: /articles/
+---
+{% if site.posts.size > 0 %}
+  {% include article-list.html %}
+{% else %}
+  <div class="empty">
+    <p><strong>First article coming soon.</strong></p>
+    <p>In the meantime, check out my <a href="{{ "/projects/" | relative_url }}">projects</a>.</p>
+  </div>
+{% endif %}

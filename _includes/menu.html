@@ -1,10 +1,18 @@
-<nav>
+<nav{% if include.class %} class="{{ include.class }}"{% endif %}>
 {%- for item in include.menu -%}
   {%- assign node = site.pages | where: "name", item.file | first -%}
   {%- assign url = item.url | default: node.url -%}
   {%- assign title = item.title | default: node.title -%}
-  <a href="{{ url | relative_url }}" {% if url == page.url %}class="selected"{% endif %}>
-    {%- if item.icon -%}<svg aria-label="{{ title }}" class="icon"><use xlink:href="{{ "/assets/fontawesome/icons.svg" | relative_url }}#{{ item.icon }}"></use></svg>{%- else -%}{{ title }}{%- endif -%}
+  {%- assign external = false -%}
+  {%- if url contains "://" or url contains "mailto:" -%}{%- assign external = true -%}{%- endif -%}
+  {%- assign selected = false -%}
+  {%- if url == page.url -%}{%- assign selected = true -%}{%- endif -%}
+  {%- if url == "/articles/" and page.layout == "post" -%}{%- assign selected = true -%}{%- endif %}
+  <a href="{% if external %}{{ url }}{% else %}{{ url | relative_url }}{% endif %}"
+    {%- if selected %} class="selected" aria-current="page"{% endif -%}
+    {%- if item.icon %} aria-label="{{ title }}" title="{{ title }}"{% endif -%}
+    {%- if external and item.icon != "envelope" %} target="_blank" rel="noopener"{% endif %}>
+    {%- if item.icon -%}<svg aria-hidden="true" class="icon"><use xlink:href="{{ "/assets/fontawesome/icons.svg" | relative_url }}#{{ item.icon }}"></use></svg>{%- else -%}{{ title }}{%- endif -%}
   </a>
-{%- endfor -%}
+{%- endfor %}
 </nav>

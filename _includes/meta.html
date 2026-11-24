@@ -1,5 +1,7 @@
-<header>
-  <h1><a href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a></h1>
-  {%- assign date_format = site.date_format | default: "%B %d, %Y" -%}
-  <time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: date_format }}</time>
-</header>
+{%- assign words = include.post.content | strip_html | number_of_words -%}
+{%- assign minutes = words | divided_by: 200 | plus: 1 -%}
+<p class="meta">
+  <time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: site.date_format }}</time>
+  <span aria-hidden="true">·</span> {{ minutes }} min read
+  {%- for tag in include.post.tags %} <span class="tag">{{ tag }}</span>{% endfor %}
+</p>
